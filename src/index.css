@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --color-apple-bg: #F5F5F7;
+  --color-apple-card: #FFFFFF;
+  --color-apple-text: #1D1D1F;
+  --color-apple-text-muted: #86868B;
+  --color-apple-blue: #0071E3;
+  --color-apple-blue-hover: #0077ED;
+  --color-apple-border: #D2D2D7;
+
+  --color-apple-dark-bg: #000000;
+  --color-apple-dark-card: #1C1C1E;
+  --color-apple-dark-text: #F5F5F7;
+  --color-apple-dark-text-muted: #A1A1A6; /* Brighter gray for better visibility in dark mode */
+  --color-apple-dark-blue: #0A84FF; /* Apple's standard dark mode blue */
+  --color-apple-dark-blue-hover: #409CFF;
+  --color-apple-dark-border: #38383A;
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --bg: var(--color-apple-bg);
+    --card: var(--color-apple-card);
+    --text: var(--color-apple-text);
+    --text-muted: var(--color-apple-text-muted);
+    --accent: var(--color-apple-blue);
+    --accent-hover: var(--color-apple-blue-hover);
+    --border: var(--color-apple-border);
+  }
+
+  .dark {
+    color-scheme: dark;
+    --bg: var(--color-apple-dark-bg);
+    --card: var(--color-apple-dark-card);
+    --text: var(--color-apple-dark-text);
+    --text-muted: var(--color-apple-dark-text-muted);
+    --accent: var(--color-apple-dark-blue);
+    --accent-hover: var(--color-apple-dark-blue-hover);
+    --border: var(--color-apple-dark-border);
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
